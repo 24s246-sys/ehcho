@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: echoachat
+    env: node
+    buildCommand: npm run install-all && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
+      - key: DATABASE_URL
+        sync: false
+      - key: PORT
+        value: 10000
